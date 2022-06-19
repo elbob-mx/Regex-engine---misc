@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo RegEx</title>
+</head>
+<body>
+    
+    <script>
+        const text = '11a22b33c';
+
+        // const expression = new RegExp("(\\d\\d\\w)","gi");
+        const expression = /(\d\d)(\w)/g;
+
+        console.log(expression.test(text));
+
+        expression.lastIndex = 0;
+
+        while(result = expression.exec(text)) {
+            console.log(result);
+        }
+    </script>
+
+</body>
+</html>
